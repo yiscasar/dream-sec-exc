@@ -7,7 +7,6 @@ This is a simple Flask web app that retrieves and displays data from the [JSONPl
 3. `/json/user/<user_id>`: Returns the data of a specific user ID from the JSONPlaceholder API in JSON format. <br>
 If the user ID does not exist, it returns an error message.
 4. Additionally, it has an error page that handles 404 errors.
-<br>
 
 # Running the app
 

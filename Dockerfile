@@ -1,5 +1,5 @@
 # Use an official Python runtime as a parent image
-FROM yisca/flask-web-app:latest
+FROM python:3.9-slim-buster
 
 # Set the working directory to /app
 WORKDIR /app

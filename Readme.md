@@ -28,9 +28,9 @@ To build and run the Docker image for this web app, follow these steps:
 
 1. Clone this Git repository to your local machine.
 2. Navigate to the repository directory in your terminal.
-3. Build the Docker image using the following command:  `docker build -t flask-web-app .` <br>
+3. Build the Docker image using the following command:  `docker build -t flask-web-app .`. <br>
 This command will build a Docker image called `flask-web-app` using the Dockerfile in the repository directory.
-4. Run the Docker container using the following command:  `docker run -p 5000:5000 flask-web-app` <br>
+4. Run the Docker container using the following command:  `docker run -p 5000:5000 flask-web-app`. <br>
 This command will start a Docker container running the Flask web app, which is accessible at `http://localhost:5000`.
 
 
@@ -47,3 +47,7 @@ The workflow is triggered by a `push` event to the `main` branch and has the fol
 To use this Git Actions workflow, you will need to create a Docker registry and store the Docker username and password as secrets in your Git repository. <br>
 You will also need to modify the workflow file to include the correct Docker registry URL and image tag. <br>
 The workflow file is located in the `.github/workflows` directory of the Git repository.
+
+Note: <br>
+The docker images which will be created by GitHub action will have the following tag patteren: `yisca/flask-web-app:${git-action-run-number}`. <br>
+Therefore, in order to use the image created by the git action, run number 11, you will need to run the following command: `docker run -p 5000:5000 yisca/flask-web-app:11`.

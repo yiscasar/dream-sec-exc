@@ -1,16 +1,16 @@
 name: docker-build-and-push
 
+# run only when PR to master was closed
 on:
-  push:
-  # Only on pushes to main branch
-    branches:
+  pull_request:
+    branches: 
       - main
-    # Only trigger on merges to main
-    paths-ignore:
-      - '**'
+    types: [closed]
 
 jobs:
   docker-build-and-push:
+    # only if the PR was closed due to merging
+    if: ${{ github.event.pull_request.merged }}
     runs-on: ubuntu-20.04
 
     steps:

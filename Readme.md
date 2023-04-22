@@ -22,7 +22,6 @@ If the user ID does not exist, it returns an error message.
 For example, the route `http://localhost:5000/json/user/1` will show you the data for the user whose ID number is 1.
 6. To stop the app press `CTRL+C` in your local terminal.
 
-
 ## Building and Running the app using Docker Image
 
 To build and run the Docker image for this web app, follow these steps:

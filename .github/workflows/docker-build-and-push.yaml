@@ -22,7 +22,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: yisca/flask-web-app:${{ github.run_number }}
+          tags: docker.io/yisca/flask-web-app:${{ github.run_number }}
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
